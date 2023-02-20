@@ -1,5 +1,5 @@
 # gzip-handler
-Minimal `http.Handler` middlewware that defends against [BREACH](https://breachattack.com/) by adding [Heal the BREACH](https://ieeexplore.ieee.org/document/9754554) style mitigations to the response written by the `http.ResponseWriter`.
+Minimal `http.Handler` middleware that defends against [BREACH](https://breachattack.com/) by adding [Heal the BREACH](https://ieeexplore.ieee.org/document/9754554) style mitigations to the response written by the `http.ResponseWriter`.
 
 
 # Installing
