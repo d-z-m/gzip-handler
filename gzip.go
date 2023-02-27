@@ -75,7 +75,7 @@ func Handler(h http.Handler) http.Handler {
 		// while this technique is effectively just adding noise to the channel, it is thought that HTB effectively mitigates BREACH,
 		// as it increases the difficulty of the attack by more than 2 orders of magnitude for a padding length of up to 10 bytes.
 
-		gzw.Header.Name = padding[:randomUint16()%HTBPaddingSize]
+		gzw.Header.Name = padding[:(randomUint16()%HTBPaddingSize)+1]
 
 		h.ServeHTTP(&gzipResponseWriter{ResponseWriter: w, Writer: gzw}, r)
 	})
