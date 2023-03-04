@@ -18,7 +18,8 @@ const (
 	// amount of requests an attacker must perform(~50k with padding=10, ~5M with
 	// padding =100) to get any meaningful signal. This makes any attempt at an attack
 	// leveraging BREACH obvious to an IDS/WAF capability, and thus easily blockable.
-	HTBPaddingSize = 10
+	// if adding a random value by modular reduction as we are here, this needs to be a power of 2, to avoid modulo bias reducing the uint16
+	HTBPaddingSize = 32
 )
 
 var padding string
